@@ -64,7 +64,6 @@ p.senderInfo.botstyle{
 header#top_banner a{
     color: var(--text-dark) !important;
     font-family: 'Courier New', Courier, monospace;
-    content: "༻☆joryn's chattable☆༺";
     text-transform: lowercase;
 }
 /* header#top_banner{

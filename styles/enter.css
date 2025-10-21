@@ -48,7 +48,7 @@ a img{
 }
 footer{
     width: 100%;
-    min-height: 200px;
+    min-height: 100vh;
     margin-top: -5px;
     background-image: url('/img/cobblestone.jpg');
     border-top: solid 15px #e0dedc;

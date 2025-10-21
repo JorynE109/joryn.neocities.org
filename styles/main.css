@@ -37,3 +37,6 @@ table tr{
 table tr td{
     display: block;
 }
+#chattable{
+    height: 100%;
+}
