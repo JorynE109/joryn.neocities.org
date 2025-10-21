@@ -1,0 +1,39 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --background-color: #eee7d2;
+}
+body{
+    font-family: 'Courier New', Courier, monospace;
+    background-color: var(--background-color);
+    min-height: 100vh;
+}
+#back{
+    display: block;
+    font-family: 'Courier New', Courier, monospace;
+    position: absolute;
+    left: 100px;
+}
+#back a{
+    display: block;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    background-color: aquamarine;
+    padding: 1rem;
+    width: fit-content;
+}
+table{
+    display: flex;
+    flex-direction: column;
+}
+table tr{
+    display: flex;
+    flex-direction: row;
+}
+table tr td{
+    display: block;
+}

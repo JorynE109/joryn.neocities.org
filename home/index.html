@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joryn - Home</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/home.css">
+    <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
+    <script src="https://iframe.chat/scripts/main.min.js"></script>
+    <script src="/js/chat.js"></script>
+</head>
+<body>
+    <a href="../bulletin/"  id="bulletin"><img src="../img/bulletin.png"></a>
+    <a href="../page/about/"  id="selfPortrait"><img src="../img/self-portrait.png"></a>
+    <a href="../work/"><img src="../img/desk.png" id="desk"></a>
+    <a href="../shelf/"><img src="../img/shelf.png" id="shelf"></a>
+    
+    <div id="chatHolder">
+        <iframe src="https://iframe.chat/embed?chat=83732559" id="chattable" height="100%" style="opacity: 1;"></iframe>
+    </div>
+    <script>
+        chattable.initialize({
+            stylesheet: "/styles/chat.css" // path to custom stylesheet
+        });
+    </script>
+</body>
+
+<script src="https://unpkg.com/cursor-effects@latest/dist/browser.js"></script>
+<script>
+    window.addEventListener("load", (event) => {
+        new cursoreffects.fairyDustCursor({
+        colors: ["#a987ed", "#8953f5", "#651df5"],
+        fairySymbol: "★",
+        });
+    });
+</script>
+</html>

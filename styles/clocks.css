@@ -1,0 +1,27 @@
+body{
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #eee7d2;
+    background-image: url('/img/shrines/clocks/bg.gif');
+    background-size: 50px;
+    background-repeat: repeat;
+}
+.wrapper{
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+    background-color: #eee7d2;
+}
+h1{
+    margin-top: 80px;
+}
+#clocks{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+#clocks img{
+    max-height: 300px;
+}

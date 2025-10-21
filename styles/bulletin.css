@@ -1,0 +1,45 @@
+.wrapper{
+    width: 1343px;
+    height: 1101px;
+    margin: auto;
+    padding: 250px;
+    background-image: url('/img/bulletin.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+h1{
+    display: block;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #ffe600;
+    padding: 20px 10px 10px 10px;
+    width: fit-content;
+    margin: auto;
+}
+table{
+    width: 100%;
+}
+table tr{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+table td{
+    display: block;
+    margin: 1rem;
+    width: calc(50% - 2rem);
+}
+table td iframe{
+    width: 100%;
+    background-color: #ff6347;
+}
+#messages{
+    min-height: 400px;
+}
+#guestbook, #chat{
+    height: 100%;
+}
+iframe{
+    border: none;
+    height: 100%;
+}

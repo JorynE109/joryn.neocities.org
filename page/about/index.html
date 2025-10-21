@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Joryn</title>
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/about.css">
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+    <script src="https://iframe.chat/scripts/main.min.js"></script>
+    <script src="/js/chat.js"></script>
+</head>
+<body>
+    <div id="back"><a href="/home/">back to home</a></div>
+    <div class="wrapper">
+        <h1>About Joryn</h1>
+        <table>
+            <tr>
+                <td style="padding-right: 20px;">
+                    <img src="/img/self-portrait.png" alt="self portrait" id="selfPortrait">
+                </td>
+                <td>
+                    <table id="info">
+                        <tr>
+                            <td>They/Them</td>
+                            <td>20 Y/O</td>
+                            <td>Canada</td>
+                        </tr>
+                    </table>
+                    <p id="bio">hi i'm joryn, i'm making this for a nice online home to chill in and experiment in. Thanks for taking a look around!</p>
+                    <table class="interests">
+                        <tr>
+                            <th>
+                                Goals
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <ul>
+                                    <li>Finish this site</li>
+                                    <li>Another item</li>
+                                    <li>Another item</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr class="hr">
+                        </tr>
+                    </table>
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table class="interests">
+                        <tr>
+                            <th>Likes and Dislikes</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p><b>Likes:</b></p>
+                                <ul>
+                                    <li class="interest"><p class="interestName">Coding</p><p class="likeButton" data-interest="coding">♡</p></li>
+                                    <li class="interest"><p class="interestName">Physical Media</p><p class="likeButton" data-interest="physical-media">♡</p></li>
+                                    <li class="interest"><p class="interestName">Anarchism</p><p class="likeButton" data-interest="anarchism">♡</p></li>
+                                    <li class="interest"><p class="interestName">Piracy</p><p class="likeButton" data-interest="piracy">♡</p></li>
+                                </ul>
+                            </td>
+                            <td>
+                                <p><b>Dislikes:</b></p>
+                                <ul>
+                                    <li class="interest"><p class="interestName">Fascism</p><p class="dislikeButton" data-interest="fascism">🖕</p></li>
+                                    <li class="interest"><p class="interestName">Queerphobia</p><p class="dislikeButton" data-interest="queerphobia">🖕</p></li>
+                                    <li class="interest"><p class="interestName">Billionaires</p><p class="dislikeButton" data-interest="billionaires">🖕</p></li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Current</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p><b>Learning:</b></p>
+                                <ul>
+                                    <li class="interest"><p class="interestName">JavaScript</p><p class="likeButton" data-interest="javascript">♡</p></li>
+                                    <li class="interest"><p class="interestName">Violin</p><p class="likeButton" data-interest="violin">♡</p></li>
+                                </ul>
+                            </td>
+                            <td>
+                                <p><b>Watching:</b></p>
+                                <ul>
+                                    <li class="interest"><p class="interestName">Gilmore Girls</p><p class="likeButton" data-interest="gilmore-girls">♡</p></li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Favourites</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p><b>Movies:</b></p>
+                                <ul>
+                                    <li class="interest"><p class="interestName">Eternal Sunshine of the Spotless Mind</p><p class="likeButton" data-interest="eternal-sunshine-of-the-spotless-mind">♡</p></li>
+                                </ul>
+                            </td>
+                            <td>
+                                <p><b>Books:</b></p>
+                                <ul>
+                                    <li class="interest"><p class="interestName">The Picture of Dorian Gray</p><p class="likeButton" data-interest="the-picture-of-dorian-gray">♡</p></li>
+                                </ul>
+                            </td>
+                            <td>
+                                <p><b>Albums:</b></p>
+                                <ul>
+                                    <li class="interest"><p class="interestName"><a href="https://www.youtube.com/watch?v=D6TcmF2jM0s" target="_blank">Hymn</a> - The Narcissist Cookbook</p><p class="likeButton" data-interest="hymn-by-the-narcissist-cookbook">♡</p></li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div id="chatHolder">
+        <iframe src="https://iframe.chat/embed?chat=83732559" id="chattable" height="100%"></iframe>
+    </div>
+    <script>
+        chattable.initialize({
+            stylesheet: "/styles/chat.css" // path to custom stylesheet
+        });
+    </script>
+    <script>
+        const likeButtons = document.querySelectorAll('.likeButton');
+        const dislikeButtons = document.querySelectorAll('.dislikeButton');
+        let likedItems = [];
+        let dislikedItems = [];
+
+        addEventListener('DOMContentLoaded', (event) => {
+            retrieveLikedItems();
+            retrieveDislikedItems();
+            updateClassLists();
+        });
+
+        likeButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const interest = button.dataset.interest;
+                if (!button.classList.contains("liked")) {
+                    button.textContent = '♥';
+                    button.classList.add(`liked`);
+                    likedItems.push(interest);
+                    saveLikedItems();
+                    sendChatMessage(`likes ${interest.replace(/-/g, " ")}`);
+                } else {
+                    button.textContent = '♡';
+                    button.classList.remove(`liked`);
+                    likedItems = likedItems.filter(item => item !== interest);
+                    saveLikedItems();
+                }
+            });
+        });
+
+        dislikeButtons.forEach(button =>{
+            button.addEventListener('click', () => {
+                const disgust = button.dataset.interest;
+                if (!button.classList.contains("hates")) {
+                    button.classList.add(`hates`);
+                    sendChatMessage(`hates ${disgust.replace(/-/g, " ")}`);
+                    dislikedItems.push(disgust);
+                    saveDislikedItems();
+                } else {
+                    button.classList.remove(`hates`);
+                    dislikedItems = dislikedItems.filter(item => item !== disgust);
+                    saveDislikedItems();
+                }
+            });
+        });
+
+        // Save liked items
+        function saveLikedItems() {
+            localStorage.setItem('likedItems', JSON.stringify(likedItems));
+        }
+        function saveDislikedItems() {
+            localStorage.setItem('dislikedItems', JSON.stringify(dislikedItems));
+        }
+
+        // Retrieve liked items from storage
+        function retrieveLikedItems() {
+            const stored = localStorage.getItem('likedItems');
+            if (stored) {
+                try {
+                    likedItems = JSON.parse(stored);
+                } catch {
+                    likedItems = []; // fallback if data is malformed
+                }
+            } else {
+                likedItems = [];
+            }
+        }
+        function retrieveDislikedItems() {
+            const stored = localStorage.getItem('dislikedItems');
+            if (stored) {
+                try {
+                    dislikedItems = JSON.parse(stored);
+                } catch {
+                    dislikedItems = []; // fallback if data is malformed
+                }
+            } else {
+                dislikedItems = [];
+            }
+        }
+
+        // Update content based on liked items
+        function updateClassLists() {
+            likeButtons.forEach(button => {
+                const interest = button.dataset.interest;
+                if (likedItems.includes(interest)) {
+                    button.textContent = '♥';
+                    button.classList.add("liked");
+                } else {
+                    button.textContent = '♡';
+                    button.classList.remove("liked");
+                }
+            });
+            dislikeButtons.forEach(button => {
+                const interest = button.dataset.interest;
+                if (dislikedItems.includes(interest)) {
+                    button.classList.add("hates");
+                } else {
+                    button.classList.remove("hates");
+                }
+            });
+        }
+
+
+    </script>
+</body>
+</html>

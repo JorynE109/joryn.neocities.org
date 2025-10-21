@@ -1,0 +1,89 @@
+@keyframes rotate {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+@keyframes pulse {
+  from {
+    
+  }
+  to {
+    background: transparent;
+  }
+}
+:root {
+  --body-color: #4d3a24;
+  --textarea-color: #4d4d4d;
+   --dashboard-viewport-width: 300px;
+  --dark-main-color: #cd9c62;
+  --main-color: #ffe298;
+  --text-main-color: #ffe298;
+  --main-gradient: linear-gradient(5deg, var(--main-color), var(--dark-main-color));
+  --main-gradient-reverse: linear-gradient(5deg, var(--dark-main-color), var(--main-color));
+  --secondary-color: #FFF;
+  --text-dark: #000;
+}
+
+@keyframes bump {
+  0% {
+    transform: translateY(0);
+  } 
+  25% {
+    transform: translateY(2px);
+  }
+  50% {
+    transform: translateY(-2px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+body{
+    background-color: var(--body-color);
+    color: var(--text-main-color);
+}
+p.recieved[uid="bot"]{
+    /* background-color: #e0e0e0;
+    color: blueviolet; */
+    color: var(--dark-main-color);
+    text-transform: lowercase;
+    font-style: italic;
+}
+p.senderInfo.botstyle{
+    display: none;
+}
+#input{
+    border-radius: 0;
+    background-image: var(--main-gradient-reverse);
+    color: var(--text-dark);
+    
+}
+header#top_banner a{
+    color: var(--text-dark) !important;
+    font-family: 'Courier New', Courier, monospace;
+    content: "༻☆joryn's chattable☆༺";
+    text-transform: lowercase;
+}
+/* header#top_banner{
+    opacity: 0;
+    transition: all ease 1s;
+}
+div#settings{
+    transition: all ease 1s;
+    opacity: 0;
+}
+header#top_banner:hover, #top_banner:hover ~ #settings{
+    transition: all ease 1s;
+    opacity: 1 !important;
+}
+#settings:hover{
+    transition: all ease 1s;
+    opacity: 1;
+} */
+#emojiTray{
+    background-color: var(--textarea-color);
+    
+}

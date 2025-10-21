@@ -1,0 +1,13 @@
+h1{
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+.wrapper{
+    background-image: url('/img/desk.png');
+    width: 1036px;
+    height: 500px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

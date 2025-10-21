@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter Joryn's Home</title>
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/enter.css">
+    <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
+    <script src="https://iframe.chat/scripts/main.min.js"></script>
+    <script src="/js/chat.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Enter?</h1>
+        <main>
+            <div id="disclaimer">
+            <h2>Before Entering</h2>
+            <p>There may be some flashing lights ahead.</p>
+            <p>This is best viewed on a standard desktop monitor.</p>
+            <p>Also, what should we call you?</p>
+            <form>        
+                <input type="text" id="nameInput" value="" placeholder="name" name="name">
+                <input type="submit" id="nameInputButton" value="Submit">
+            </form>
+            </div>
+        <a href='#' id="enterLink"><img src="/img/door.png"></a>
+        </main>
+    </div>
+    <footer>
+        <p></p>
+    </footer>
+    <div id="chatHolder">
+        <iframe src="https://iframe.chat/embed?chat=83732559" id="chattable" height="100%" style="opacity: 0;"></iframe>
+    </div>
+    <script>
+        chattable.initialize({
+            stylesheet: "/styles/chat.css" // path to custom stylesheet
+        });
+    </script>
+<script>
+const $nameInput = document.getElementById('nameInput');
+const nameSet = localStorage.getItem('nameSet') === 'true';
+const $enterLink = document.getElementById('enterLink');
+
+$nameInput.addEventListener("change", (event) => {
+    if (event.target.value){
+        let userName = event.target.value;
+        console.log(userName);
+        chattable.setName(userName);
+        localStorage.setItem("userName", userName);
+        nameSet = true;
+        localStorage.setItem('nameSet', 'true');
+        sendChatMessage("has logged on, welcome!");
+    }
+});
+
+function changeEnterLink(){
+    if (nameSet === true){
+        $enterLink.href = '/home/';
+    }
+};
+
+window.addEventListener("load", changeEnterLink);
+
+</script>
+</body>
+</html>
