@@ -7,5 +7,48 @@
 </head>
 <body>
     <h1>News</h1>
+    <main>
+        <div id="updates">
+            <h2>Updates</h2>
+            <ul id="updateslist">
+
+            </ul>
+        </div>
+    </main>
+<script>
+const updateslist = document.getElementById("updateslist");
+const updatesArray = [];
+
+async function loadUpdates() {
+    try {
+        const response = await fetch('/bulletin/updates.json');
+        const updates = await response.json();
+
+        console.log("Raw JSON:", updates);
+
+        for (const update of updates) {
+            const { title, date, content } = update;
+            updatesArray.push({ title, date, content });
+        }
+
+        console.log("Processed updatesArray:", updatesArray);
+
+        updatesArray.slice().reverse().forEach(Object => {
+            const li = document.createElement('li');
+            li.className = 'update';
+            li.innerHTML = `<p class="updatetitle">${Object.title}</p><p class="date">${Object.date}</p><p class="content">${Object.content}</p>`;
+            updateslist.appendChild(li);
+        });
+
+
+    } catch (err) {
+        console.error('Error loading updates:', err);
+    }
+}
+
+// Call the function
+loadUpdates();
+
+</script>
 </body>
 </html>

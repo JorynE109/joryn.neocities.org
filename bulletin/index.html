@@ -11,35 +11,22 @@
 <body>
     <div id="back"><a href="/home/">back to home</a></div>
     <div class="wrapper">
-        <h1 id="heading">Bulletin Board</h1>
-        <table>
-            <tr>
-                <td>
-                    <div id="news">
-                        <iframe src="news/"></iframe>
-                    </div>
-                </td>
-                <td>
-                    <div id="events">
-                        <iframe src="events/"></iframe>
-                    </div>
-                </td>
-            </tr>
-            <tr id="messages">
-                <td>
-                    <div id="guestbook">
-                        <iframe src="/page/guestbook/"></iframe>
-                    </div>
-                </td>
-                <td>
-                    <div id="chat">
-                        <iframe src="https://iframe.chat/embed?chat=83732559" id="chattable"></iframe>
-                    </div>
-                </td>
-            </tr>
-        </table>
-        
-        
+        <div id="heightMinimizer">
+            <h1 id="heading">Bulletin Board</h1>
+            <div id="table">
+                <div id="news">
+                    <iframe src="news/"></iframe>
+                </div>
+                <div id="events">
+                    <iframe src="events/"></iframe>
+                </div>
+                <div id="guestbook">
+                    <iframe src="/page/guestbook/"></iframe>
+                </div>
+            </div>
+            
+            
+        </div>
     </div>
     <div id="chatHolder">
         <iframe src="https://iframe.chat/embed?chat=83732559" id="chattable"></iframe>
