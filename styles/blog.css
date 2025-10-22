@@ -6,4 +6,24 @@ body{
     margin: auto;
     background-color: var(--background-color);
     min-height: 100vh;
+    padding: 1rem;
+}
+li{
+    margin-left: 1rem;
+}
+hr{
+    margin: 2rem 0;
+}
+#postlist{
+    list-style-type: none;
+}
+.posttitle{
+    margin-left: 0;
+    font-weight: 600;
+}
+.posttitle a{
+    text-decoration: none;
+}
+.postdetails::before{
+    content: '✦';
 }
