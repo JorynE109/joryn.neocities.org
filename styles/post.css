@@ -1,0 +1,60 @@
+body{
+    font-family: 'Courier New', Courier, monospace;
+}
+#container{
+    max-width: 1100px;
+    margin: auto;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    
+}
+#footer{
+    display: block;
+    text-align: center;
+    width: 100%;
+    justify-self: flex-end;
+    align-self: flex-end;
+    margin-top: auto;
+}
+#content{
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    flex-grow: 1;
+    font-size: 18px;
+    max-width: 540px;
+    margin: auto;
+    line-height: 1.5;
+}
+#nextprev{
+    display: flex;
+    text-align: center;
+    width: 100%;
+    justify-self: flex-end;
+    align-self: flex-end;
+    padding: 1rem;
+    margin-top: auto;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+}
+#nextprev a{
+    padding-left: 0.5rem;
+    text-decoration: none;
+    font-weight: 600;
+}
+#nextprev a:not(:first-child){
+    border-left: solid 3px black;
+}
+#nextprev a.inactive{
+    color: #222;
+    cursor: not-allowed;
+}
+#header ul{
+    list-style-type: none;
+}

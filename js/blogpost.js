@@ -31,6 +31,7 @@ function defineIndex() {
   console.log("Computed currentIndex:", currentIndex);
 }
 
+// FIX: I would like it to always insert next, prev and home, but with class=inactive when no prev or next item
 function defineNextPrevHTML() {
   if (postsArray.length < 2) {
     nextprevHTML = `<a href="${homePath}/index.html">Home</a>`;
@@ -38,12 +39,12 @@ function defineNextPrevHTML() {
     const nextlink = Array.isArray(postsArray[currentIndex + 1])
       ? postsArray[currentIndex + 1][0]
       : postsArray[currentIndex + 1];
-    nextprevHTML = `<a href="${relativePath}/${nextlink}">Next Post &raquo;</a> | <a href="${homePath}/index.html">Home</a>`;
+    nextprevHTML = `<a class="inactive">&laquo; prev</a><a href="${homePath}/index.html">Home</a><a href="${relativePath}/${nextlink}">next &raquo;</a>`;
   } else if (currentIndex === postsArray.length - 1) {
     const prevlink = Array.isArray(postsArray[currentIndex - 1])
       ? postsArray[currentIndex - 1][0]
       : postsArray[currentIndex - 1];
-    nextprevHTML = `<a href="${relativePath}/${prevlink}">&laquo; Previous Post</a> | <a href="${homePath}/index.html">Home</a>`;
+    nextprevHTML = `<a href="${relativePath}/${prevlink}">&laquo; prev</a><a href="${homePath}/index.html">Home</a><a class="inactive">next &raquo;</a>`;
   } else {
     const prevlink = Array.isArray(postsArray[currentIndex - 1])
       ? postsArray[currentIndex - 1][0]
@@ -51,7 +52,7 @@ function defineNextPrevHTML() {
     const nextlink = Array.isArray(postsArray[currentIndex + 1])
       ? postsArray[currentIndex + 1][0]
       : postsArray[currentIndex + 1];
-    nextprevHTML = `<a href="${relativePath}/${prevlink}">&laquo; Previous Post</a> | <a href="${homePath}/index.html">Home</a> | <a href="${relativePath}/${nextlink}">Next Post &raquo;</a>`;
+    nextprevHTML = `<a href="${relativePath}/${prevlink}">&laquo; prev</a><a href="${homePath}/index.html">Home</a><a href="${relativePath}/${nextlink}">next &raquo;</a>`;
   }
 }
 
