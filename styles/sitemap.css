@@ -2,7 +2,7 @@ body{
     background-image: url('/img/backgrounds/map-seamless.jpg');
 }
 :root{
-    --copper: #C59C79;
+    --parchment: #c4ac90;
     --blackberry: #48192E;
     --kuro: #281822;
     --meadow: #957083;
@@ -10,10 +10,11 @@ body{
 .wrapper{
     max-width: 900px;
     margin: auto;
-    background-color: var(--meadow);
+    background-color: var(--parchment);
     height: 100vh;
     padding: 2rem;
     line-height: 2;
+    color: var(--kuro);
 }
 ul{
     list-style-type: none;
@@ -22,6 +23,10 @@ ul{
     border-left: solid 1px var(--kuro);
     padding: 0 2rem;
 } */
+.link{
+    color: var(--kuro);
+    display: flex;
+}
 li.link:before{
     content: "-";
     margin-right: 2rem;
@@ -34,10 +39,25 @@ li.link:before{
     padding-left: 2rem;
 }
 a{
-    color: black;
+    color: inherit;
     font-weight: 600;
     text-decoration: none;
+    display: flex;
+    width: 100%;
 }
 .visited:after{
     content: " ✓";
+    display: block;
+    margin-left: auto;
+    padding: 0 0.5rem;
+}
+.link.alt{
+    background-color: #48192e41;
+}
+.link:not(.alt){
+    background-color: #28182200;
+}
+.link:hover{
+    background-color: var(--kuro);
+    color: var(--meadow);
 }

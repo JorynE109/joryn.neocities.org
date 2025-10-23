@@ -49,5 +49,14 @@
             </li>
         </ul>
     </div>
+    <script>
+        const links = document.querySelectorAll('#sitemap .link');
+        links.forEach((li, index) => {
+        if ((index + 1) % 2 === 0) {
+            li.classList.add('alt');
+        }
+        });
+
+    </script>
 </body>
 </html>
