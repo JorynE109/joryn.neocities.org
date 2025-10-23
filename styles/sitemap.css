@@ -1,0 +1,43 @@
+body{
+    background-image: url('/img/backgrounds/map-seamless.jpg');
+}
+:root{
+    --copper: #C59C79;
+    --blackberry: #48192E;
+    --kuro: #281822;
+    --meadow: #957083;
+}
+.wrapper{
+    max-width: 900px;
+    margin: auto;
+    background-color: var(--meadow);
+    height: 100vh;
+    padding: 2rem;
+    line-height: 2;
+}
+ul{
+    list-style-type: none;
+}
+/* ul:not(:first-child){
+    border-left: solid 1px var(--kuro);
+    padding: 0 2rem;
+} */
+li.link:before{
+    content: "-";
+    margin-right: 2rem;
+}
+.child.first{
+    border-bottom: solid 1px var(--kuro);
+}
+.child{
+    border-left: solid 1px var(--kuro);
+    padding-left: 2rem;
+}
+a{
+    color: black;
+    font-weight: 600;
+    text-decoration: none;
+}
+.visited:after{
+    content: " ✓";
+}
