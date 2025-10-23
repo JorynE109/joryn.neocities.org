@@ -14,8 +14,6 @@ body{
 #back{
     display: block;
     font-family: 'Courier New', Courier, monospace;
-    position: absolute;
-    left: 100px;
 }
 #back a{
     display: block;
@@ -23,7 +21,7 @@ body{
     color: black;
     font-weight: bold;
     background-color: aquamarine;
-    padding: 1rem;
+    padding: 0.5rem;
     width: fit-content;
 }
 table{
