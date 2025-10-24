@@ -8,8 +8,6 @@ body{
     --meadow: #957083;
 }
 .wrapper{
-    max-width: 900px;
-    margin: auto;
     background-color: var(--parchment);
     height: 100vh;
     padding: 2rem;

@@ -53,7 +53,7 @@ async function loadPosts() {
     $allPostsDiv.innerHTML = '';
     $allPostsDiv.appendChild(ul);
 
-    // 8. (Optional) Show just the 3 most recent
+    // 8. Show just the 3 most recent
     const recent = posts.slice(0, 3);
     $recentPostsDiv.innerHTML = recent.map(p => `
       <div class="recentpost">

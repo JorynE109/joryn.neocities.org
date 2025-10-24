@@ -4,8 +4,6 @@ body{
     background-repeat: repeat;
 }
 .wrapper{
-    max-width: 1100px;
-    margin: 0 auto;
     background-color: var(--background-color);
     padding: 1rem;
 }

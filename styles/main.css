@@ -60,3 +60,9 @@ table tr td{
     min-height: 300px;
     border: none;
 }
+.wrapper{
+    max-width: 900px;
+    margin: auto;
+    height: 100vh;
+    overflow-y: auto;
+}

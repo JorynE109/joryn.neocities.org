@@ -2,10 +2,7 @@ body{
     background-color: blue;
 }
 .wrapper{
-    max-width: 1100px;
-    margin: auto;
     background-color: var(--background-color);
-    min-height: 100vh;
     padding: 1rem;
 }
 li{

@@ -1,0 +1,43 @@
+body{
+    font-size: 16px;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+/* .wrapper{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: ;
+} */
+/* .wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: start;
+} */
+header{
+    width: 100%;
+    height: fit-content;
+    border-bottom: solid 1px black;
+    margin-bottom: 1rem;
+}
+h2{
+    font-size: 20px;
+}
+.flex-row{
+    display: flex;
+    flex-direction: row;
+}
+main{
+    flex-grow: 1;
+}
+#sidebar{
+    max-width: 250px;
+}
+
+#musicPosts ul{
+    list-style-type: none;
+}
+#musicPosts li::before{
+    content: "-";
+    padding: 0 0.5rem;
+}

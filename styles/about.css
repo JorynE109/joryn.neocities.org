@@ -2,8 +2,6 @@ body{
     background-color: brown;
 }
 .wrapper{
-    max-width: 1200px;
-    margin: 0 auto;
     padding: 20px;
     background-color: var(--background-color);
     min-height: 100vh;
@@ -51,8 +49,9 @@ h1{
     display: flex;
     align-items: center;
 }
-.interestName{
-}
+/* .interestName{
+} */
+
 .likeButton, .dislikeButton{
     margin-left: auto;
     padding-left: 1rem;

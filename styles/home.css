@@ -4,42 +4,42 @@ body{
     background-size: 300px;
     overflow: hidden;
 }
+main{
+    width: 80vw;
+    height: calc(80vh - 50px);
+    margin: auto;
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+    "bulletin portrait shelf"
+    "desk desk shelf";
+    gap: 6rem;
+}
+img{
+    width: 100%;
+}
 #bulletin{
     display: block;
-    height: 20vh;
-    position: absolute;
-    top: 25%;
-    left: 15%;
     animation: floating-1 5s ease-in-out infinite;
-}
-#bulletin img{
-    height: 100%;
+    grid-column: span 1;
+    grid-area: bulletin;
 }
 #desk{
-    height: 25vh;
-    position: absolute;
-    top: 50%;
-    left: 35%;
+    display: block;
+    grid-area: desk;
     animation: floating-2 6s ease-in-out infinite;
 }
 #shelf{
     transform: rotate(-3deg);
     height: 40vh;
-    position: absolute;
-    top: 25%;
-    right: 15%;
+    grid-area: shelf;
     animation: floating-3 4s ease-in-out infinite;
 }
 #selfPortrait{
     display: block;
-    width: 10vh;
-    position: absolute;
-    top: 15%;
-    left: 50%;
     animation: floating-4 3s ease-in-out infinite;
-}
-#selfPortrait img{
-    width: 100%;
+    grid-area: portrait;
 }
 #chatHolder{
     height: calc(80% - 2rem);
@@ -55,7 +55,6 @@ body{
 }
 #chatHolder:hover{
     transform: translateX(-150px) rotate(-2deg);
- 
 }
 #chatHolder iframe{
     height: 100%;
@@ -109,4 +108,10 @@ body{
 }
 #bulletin:hover, #desk:hover, #shelf:hover, #selfPortrait:hover{
     animation-play-state: paused;
+}
+@media screen and (max-width: 900px){
+    #chatHolder{
+        right: -250px;
+    }
+
 }
