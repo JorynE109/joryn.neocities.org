@@ -5,7 +5,7 @@ body{
     overflow: hidden;
 }
 main{
-    width: 80vw;
+    width:60vw;
     height: calc(80vh - 50px);
     margin: auto;
     margin-top: 50px;
@@ -53,7 +53,7 @@ img{
     transform-origin: bottom;
     transition: all 1s ease;
 }
-#chatHolder:hover{
+#chatHolder:hover, #chatHolder:active{
     transform: translateX(-150px) rotate(-2deg);
 }
 #chatHolder iframe{
@@ -110,8 +110,24 @@ img{
     animation-play-state: paused;
 }
 @media screen and (max-width: 900px){
+    body{
+        overflow-y: auto;
+    }
     #chatHolder{
         right: -250px;
     }
+    main{
+        width: 60vw;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "bulletin"
+        "portrait"
+        "desk"
+        "shelf"
+        ;
+    }
+#chatHolder:hover, #chatHolder:active{
+    transform: translateX(-150px) rotate(-2deg);
+}
 
 }

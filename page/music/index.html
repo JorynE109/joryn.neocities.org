@@ -6,6 +6,8 @@
     <title>Music</title>
     <link rel="stylesheet" href="/styles/main.css">
     <link rel="stylesheet" href="/styles/music.css">
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+    <script src="https://iframe.chat/scripts/main.min.js"></script>
     <script src="/js/main.js" defer></script>
 </head>
 <body>
@@ -17,16 +19,43 @@
         </header>
         <div class="flex-row">
             <main>
-                <h2>Current favourite song:</h2>
-                <p id="favouritesong"><a href="">Beach Piano - The Narcissist Cookbook</a></p>
+                <div id="albumRecs">
+                    <h2>Album Recommendations</h2>
+                    <div id="albumholder">
+                        <div class="album">
+                            <img src="https://f4.bcbits.com/img/a1855444653_16.jpg">
+                            <p class="albumdetails"><a href="https://www.youtube.com/watch?v=D6TcmF2jM0s" target="_blank" class="albumtitle">Hymn</a><a href="https://thenarcissistcookbook.bandcamp.com/" class="albumartist">The Narcissist Cookbook</a></p>
+                        </div>
+                        <div class="album">
+                            <img src="https://f4.bcbits.com/img/a4284423123_16.jpg" alt="ephemera album cover">
+                            <p class="albumdetails"><a href="https://postcard-nowhere.bandcamp.com/album/ephemera" target="_blank" class="albumtitle">ephemera ©</a><a href="https://postcard-nowhere.bandcamp.com/" target="_blank" class="albumartist">Postcard Nowhere</a></p>
+                        </div>
+                        <div class="album">
+                            <img src="" alt="">
+                            <p class="albumdetails"><a href="" target="_blank" class="albumtitle"></a><a href="" target="_blank" class="albumartist"></a></p>
+                        </div>
+                        <div class="album">
+                            <img src="" alt="">
+                            <p class="albumdetails"><a href="" target="_blank" class="albumtitle"></a><a href="" target="_blank" class="albumartist"></a></p>
+                        </div>
+                    </div>
+                </div>
             </main>
             <div id="sidebar">
-                <h2>Posts tagged music</h2>
-                <div id="musicPosts">
-                    <ul>
-                        <li>example 01</li>
-                        <li>example 02</li>
-                    </ul>
+                <div id="favouritesong">
+                    <h2>Favourite song:</h2>
+                    <div class="album">
+                        <img src="https://t2.genius.com/unsafe/608x608/https%3A%2F%2Fimages.genius.com%2F3f1e42441052101e3c6aa4afc0a7d769.1000x1000x1.jpg">
+                        <p><a href="https://www.youtube.com/watch?v=WuYmFcCgNI4" target="_blank">Beach Piano<br>The Narcissist Cookbook</a></p>
+                    </div>
+                </div>
+                <div>
+                    <h2>Posts tagged music</h2>
+                    <div id="musicPosts">
+                        <ul>
+                            <li><a href="/blog//post/reconnecting-with-music.html">Reconnecting with Music</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>

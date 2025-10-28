@@ -1,57 +1,50 @@
-// save each page visited to localstorage so it can be shown as stat and on links page
+window.addEventListener("DOMContentLoaded", () => {
+  function normalizePath(p) {
+    if (!p) return '/';
+    if (!p.startsWith('/')) p = '/' + p;
+    p = p.split('?')[0].split('#')[0];
+    p = p.replace(/index\.html$/, ''); // remove index.html
+    if (!p.endsWith('/')) p = p + '/';
+    return p;
+  }
 
-const currentPage = window.location.pathname;
+  const currentPage = normalizePath(window.location.pathname);
 
-let visitedPages = JSON.parse(localStorage.getItem("visitedPages")) || [];
+  let visitedPages = JSON.parse(localStorage.getItem("visitedPages")) || [];
+  visitedPages = visitedPages.map(normalizePath);
 
-if (!visitedPages.includes(currentPage)) {
+  if (!visitedPages.includes(currentPage)) {
     visitedPages.push(currentPage);
     localStorage.setItem("visitedPages", JSON.stringify(visitedPages));
-}
+  }
 
-function normalizePath(p) {
-  if (!p) return '/';
-  // ensure it starts with a slash
-  if (!p.startsWith('/')) p = '/' + p;
-  // remove any query/hash
-  p = p.split('?')[0].split('#')[0];
-  // ensure trailing slash consistency (choose one style — here we add it)
-  if (!p.endsWith('/')) p = p + '/';
-  return p;
-}
+  function updateSitemapVisitedLinks() {
+    const links = document.querySelectorAll('.link > a');
+    const visitedPages = JSON.parse(localStorage.getItem("visitedPages")) || [];
+    const normVisited = visitedPages.map(normalizePath);
 
-function updateSitemapVisitedLinks() {
-  const links = document.querySelectorAll('.link > a');
-  const visitedPages = JSON.parse(localStorage.getItem("visitedPages")) || [];
+    links.forEach(link => {
+      const rawHref = link.getAttribute('href');
+      if (!rawHref) return;
 
-  // normalize stored visited pages once
-  const normVisited = visitedPages.map(normalizePath);
+      let linkPath;
+      try {
+        linkPath = new URL(rawHref, location.origin).pathname;
+      } catch {
+        return;
+      }
 
-  links.forEach(link => {
-    // get raw href attribute (may be relative or missing)
-    const rawHref = link.getAttribute('href');
-    if (!rawHref) return; // skip anchors without href
+      const normLinkPath = normalizePath(linkPath);
 
-    // build absolute URL using the page origin as base, then pull pathname
-    let linkPath;
-    try {
-      linkPath = new URL(rawHref, location.origin).pathname;
-    } catch (e) {
-      // fallback: skip bad hrefs
-      return;
-    }
+      if (normVisited.includes(normLinkPath)) {
+        link.classList.add('visited');
+      } else {
+        link.classList.remove('visited');
+      }
+    });
+  }
 
-    const normLinkPath = normalizePath(linkPath);
-
-    if (normVisited.includes(normLinkPath)) {
-      link.classList.add('visited');
-    } else {
-      link.classList.remove('visited');
-    }
-  });
-}
-
-
-if (currentPage === "/page/info/sitemap/") { // note the trailing slash if your URLs have it
+  if (currentPage === normalizePath("/page/info/sitemap/")) {
     updateSitemapVisitedLinks();
-}
+  }
+});
