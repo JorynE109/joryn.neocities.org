@@ -53,4 +53,38 @@ iframe{
     left: 1rem;
     bottom: 10%;
     transform: rotate(-1deg);
+    width: 350px;
+}
+#guestbook iframe{
+    width: 100%;
+}
+@media screen and (max-width: 1650px){
+    body{
+        overflow-y: auto;
+    }
+    .wrapper{
+        overflow-y: auto;
+    }
+    #guestChatWrap{
+        margin: 1rem auto;
+        width: 900px;
+    }
+    #guestbook{
+        width: calc(50% - 1rem);
+        display: inline-block;
+        position: relative;
+        min-height: 500px;
+        transform: rotate(0);
+    }
+    #guestbook iframe{
+        min-height: 500px;
+    }
+    #chatHolder{
+        width: calc(50% - 2rem);
+        display: inline-block;
+        position: relative;
+        transform: none;
+        right: 0;
+        top: 0;
+    }
 }

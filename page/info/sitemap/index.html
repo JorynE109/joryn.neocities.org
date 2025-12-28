@@ -12,7 +12,7 @@
 <body>
     <div class="wrapper">
         <h1>Sitemap</h1>
-        <ul id="sitemap">
+        <ul id="sitemap" class="sitemap full">
             <li class="link"><a href="/">entrance</a></li>
             <li>
                 <ul class="child first">
@@ -50,12 +50,6 @@
         </ul>
     </div>
     <script>
-        const links = document.querySelectorAll('#sitemap .link');
-        links.forEach((li, index) => {
-        if ((index + 1) % 2 === 0) {
-            li.classList.add('alt');
-        }
-        });
 
     </script>
 </body>

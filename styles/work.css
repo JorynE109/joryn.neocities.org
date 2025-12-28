@@ -3,7 +3,7 @@ h1{
     text-align: center;
 }
 .wrapper{
-    background-image: url('/img/desk.png');
+    background-image: url('/img/page/work/desktop-dithered.png');
     background-size: cover;
     background-position: center;
     width: calc(1036px*0.8);
@@ -12,4 +12,51 @@ h1{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    overflow: visible;
+}
+.wrapper ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.wrapper ul li{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5%;
+    width: fit-content;
+    padding: 0;
+}
+#blogbutton{
+    display: block; 
+    width: 30%; 
+    position: relative;
+}
+#blogbutton:hover .tooltip{
+    opacity: 1;
+}
+img{
+    width: 100%;
+}
+#poetrybutton:hover .tooltip{
+    opacity: 1;
+}
+
+#poetrybutton{
+    display: block; 
+    width: 30%; 
+    position: relative;
+    transform: rotate(5deg);
+}
+#featherpen{
+    width: 120px;
+    position: absolute;
+    top: 30%;
+    right: -20px;
+    transform: rotate(25deg);
+    pointer-events: none;
+}
+#poetrybutton:hover #featherpen{
+    transform: translate(-30px, 30px) rotate(3deg);
 }

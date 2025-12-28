@@ -10,12 +10,88 @@ window.addEventListener("DOMContentLoaded", () => {
 
   const currentPage = normalizePath(window.location.pathname);
 
+  const sitemap = document.getElementById("sitemap");
+
   let visitedPages = JSON.parse(localStorage.getItem("visitedPages")) || [];
   visitedPages = visitedPages.map(normalizePath);
 
   if (!visitedPages.includes(currentPage)) {
     visitedPages.push(currentPage);
     localStorage.setItem("visitedPages", JSON.stringify(visitedPages));
+  }
+
+  function updateSitemapLinks(){
+    if (sitemap.classList.contains("short")){
+      /*********************************************
+      SHORTENED SITEMAP FOR SIDEBARS:
+      <li class="link"><a href="/home/">home</a></li>
+      <li class="link"><a href="/page/about/">about</a></li>
+      <li class="link"><a href="/bulletin/">bulletin</a></li>
+          <li>
+              <ul class="child">
+                  <li class="link"><a href="/bulletin/news/">news</a></li>
+                  <li class="link"><a href="/bulletin/events/">events</a></li>
+                  <li class="link"><a href="/page/guestbook/">guestbook</a></li>
+              </ul>
+          </li>
+      <li class="link"><a href="/work/">work</a></li>
+      <li>
+          <ul class="child">
+              <li class="link"><a href="/blog/">blog</a></li>
+          </ul>
+      </li>
+      <li class="link"><a href="/shelf/">collections</a></li>
+      <li>
+          <ul class="child">
+              <li class="link"><a href="/page/shrines/clocks/">clocks</a></li>
+              <li class="link"><a href="/page/shrines/cameras/">cameras</a></li>
+              <li class="link"><a href="/page/films/">films</a></li>
+              <li class="link"><a href="/page/music/">music</a></li>
+          </ul>
+      </li>
+      FULL SITEMAP FOR SITEMAP PAGE:
+      <li class="link"><a href="/">entrance</a></li>
+            <li>
+                <ul class="child first">
+                    <li class="link"><a href="/home/">home</a></li>
+                    <li>
+                        <ul class="child">
+                            <li class="link"><a href="/page/about/">about</a></li>
+                            <li class="link"><a href="/bulletin/">bulletin</a></li>
+                                <li>
+                                    <ul class="child">
+                                        <li class="link"><a href="/bulletin/news/">news</a></li>
+                                        <li class="link"><a href="/bulletin/events/">events</a></li>
+                                        <li class="link"><a href="/page/guestbook/">guestbook</a></li>
+                                    </ul>
+                                </li>
+                            <li class="link"><a href="/work/">work</a></li>
+                            <li>
+                                <ul class="child">
+                                    <li class="link"><a href="/blog/">blog</a></li>
+                                </ul>
+                            </li>
+                            <li class="link"><a href="/shelf/">collections</a></li>
+                            <li>
+                                <ul class="child">
+                                    <li class="link"><a href="/page/shrines/clocks/">clocks</a></li>
+                                    <li class="link"><a href="/page/shrines/cameras/">cameras</a></li>
+                                    <li class="link"><a href="/page/films/">films</a></li>
+                                    <li class="link"><a href="/page/music/">music</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+      https://removelinebreaks.net/
+       *********************************************/
+      sitemap.innerHTML = "<li class='link'><a href='/home/'>home</a></li><li class='link'><a href='/page/about/'>about</a></li><li class='link'><a href='/bulletin/'>bulletin</a></li><li><ul class='child'><li class='link'><a href='/bulletin/news/'>news</a></li><li class='link'><a href='/bulletin/events/'>events</a></li><li class='link'><a href='/page/guestbook/'>guestbook</a></li></ul></li><li class='link'><a href='/work/'>work</a></li><li><ul class='child'><li class='link'><a href='/blog/'>blog</a></li></ul></li><li class='link'><a href='/shelf/'>collections</a></li><li><ul class='child'><li class='link'><a href='/page/shrines/clocks/'>clocks</a></li><li class='link'><a href='/page/shrines/cameras/'>cameras</a></li><li class='link'><a href='/page/films/'>films</a></li><li class='link'><a href='/page/music/'>music</a></li></ul></li>"
+    }else {
+      sitemap.innerHTML = "<li class='link'><a href='/'>entrance</a></li><li><ul class='child first'><li class='link'><a href='/home/'>home</a></li><li><ul class='child'><li class='link'><a href='/page/about/'>about</a></li><li class='link'><a href='/bulletin/'>bulletin</a></li><li><ul class='child'><li class='link'><a href='/bulletin/news/'>news</a></li><li class='link'><a href='/bulletin/events/'>events</a></li><li class='link'><a href='/page/guestbook/'>guestbook</a></li></ul></li><li class='link'><a href='/work/'>work</a></li><li><ul class='child'><li class='link'><a href='/blog/'>blog</a></li></ul></li><li class='link'><a href='/shelf/'>collections</a></li><li><ul class='child'><li class='link'><a href='/page/shrines/clocks/'>clocks</a></li><li class='link'><a href='/page/shrines/cameras/'>cameras</a></li><li class='link'><a href='/page/films/'>films</a></li><li class='link'><a href='/page/music/'>music</a></li></ul></li></ul></li></ul></li>"
+    }
+    
+    updateSitemapVisitedLinks();
   }
 
   function updateSitemapVisitedLinks() {
@@ -44,7 +120,16 @@ window.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  if (currentPage === normalizePath("/page/info/sitemap/")) {
-    updateSitemapVisitedLinks();
+  if (sitemap) {
+    updateSitemapLinks();
+
   }
+
+  
+  const links = document.querySelectorAll('#sitemap .link');
+  links.forEach((li, index) => {
+  if ((index + 1) % 2 === 0) {
+      li.classList.add('alt');
+  }
+  });
 });

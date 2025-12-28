@@ -20,9 +20,13 @@ body{
     text-decoration: none;
     color: black;
     font-weight: bold;
-    background-color: aquamarine;
+    background-color: rgba(0,0,0,0);
     padding: 0.5rem;
+    padding-left: 0;    
     width: fit-content;
+}
+#back a::before{
+    content: "<< ";
 }
 table{
     display: flex;
@@ -65,4 +69,76 @@ table tr td{
     margin: auto;
     height: 100vh;
     overflow-y: auto;
+}
+.tooltip{
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    display: block;
+    padding: 0.5rem;
+    text-align: center;
+    width: fit-content;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+/**************************
+COLOURS
+**************************/
+:root{
+    --main: #000;
+    --secondary: #FFF;
+}
+
+/**************************
+SITEMAPS
+**************************/
+ul#sitemap, #sitemap li{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+#sitemap *{
+    list-style: none;
+    list-style-type: none;
+}
+/* ul:not(:first-child){
+    border-left: solid 1px var(--kuro);
+    padding: 0 2rem;
+} */
+#sitemap.link{
+    /* color: var(--kuro); */
+    display: flex;
+}
+#sitemap .child.first{
+    border-bottom: solid 1px var(--main);
+}
+#sitemap .child{
+    border-left: solid 1px var(--main);
+    padding-left: 0.5rem;
+}
+#sitemap a{
+    color: inherit;
+    font-weight: 600;
+    text-decoration: none;
+    display: flex;
+    width: 100%;
+}
+#sitemap .visited:after{
+    content: " ✓";
+    display: block;
+    margin-left: auto;
+    padding: 0 0.5rem;
+}
+#sitemap .link.alt{
+    background-color: #48192e41;
+}
+#sitemap .link:not(.alt){
+    background-color: #28182200;
+}
+#sitemap .link:hover{
+    background-color: var(--main);
+    color: var(--secondary);
 }

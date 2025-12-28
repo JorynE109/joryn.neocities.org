@@ -41,7 +41,7 @@
     </script>
 <script>
 const $nameInput = document.getElementById('nameInput');
-const nameSet = localStorage.getItem('nameSet') === 'true';
+let nameSet = localStorage.getItem('nameSet') === 'true';
 const $enterLink = document.getElementById('enterLink');
 
 $nameInput.addEventListener("change", (event) => {
