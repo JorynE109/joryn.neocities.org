@@ -1,12 +1,30 @@
+:root{
+    --background-color: #6e2529;
+    --text-color: #060a0a;
+    --link-color: #060a0a;
+}
 body{
-    background-image: url('/img/shrines/films/bg.gif');
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #544540;
+    background-image: url('/img/backgrounds/red-pattern.png');
     background-size: 200px;
     background-repeat: repeat;
+    color: var(--text-color);
 }
 .wrapper{
     background-color: var(--background-color);
     padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
 }
+hr{
+    margin: 1rem 0;
+}
+#content{
+    padding: 10px;
+}
+
 #films{
     display: flex;
     flex-wrap: wrap;
@@ -14,14 +32,18 @@ body{
     width: 100%;
 }
 .film{
-    max-width: calc(50% - 2rem);
+    max-width: 100%;
     display: flex;
     gap: 0.5rem;
 }
 img{
     width: 100%;
     display: block;
+
 }
 .film >*{
     flex: 1;
+}
+p, a{
+    font-weight: 600;
 }

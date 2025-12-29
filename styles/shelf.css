@@ -1,3 +1,24 @@
+body{
+    background-image: url('/img/twinkling-stars.gif');
+    background-repeat: repeat;
+    background-size: 300px;
+}
+
+header{
+    max-width: 900px;
+    margin: auto;
+    background-color: #432672b5;
+    padding: 1rem;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+}
+#back a{
+    color: white;
+}
 .wrapper{
     background-image: url('../img/shelf.png');
     display: block;
@@ -9,17 +30,7 @@
     top: 10%;
     left: 50%;
     transform: translate(-50%);
-    padding: 100px 100px 110px 110px;
-}
-h1{
-    display: block;
-    height: 110px;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    padding: 2rem;
-    text-align: center;
-    font-family: 'Courier New', Courier, monospace;
-    margin-bottom: 215px;
+    padding: 350px 100px 100px 100px;
 }
 #shrinesTable{
     width: 100%;
@@ -49,8 +60,8 @@ h1{
     display: block;
     width: 250px;
     max-height: 400px;
-    margin-top: 65px;
-    margin-left: 250px;
+    margin-top: 25px;
+    margin-left: 30px;
 }
 #filmRecs img{
     width: 100%;
@@ -59,7 +70,7 @@ h1{
 }
 #musicRecs{
     display: block;
-    max-width: 180px;
     max-height: 300px;
-    margin-left: 60px;
+    margin-left: 0;
+    margin-top: -40px;
 }
