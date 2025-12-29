@@ -32,60 +32,65 @@ window.addEventListener("DOMContentLoaded", () => {
     if (sitemap.classList.contains("short")){
       /*********************************************
       SHORTENED SITEMAP FOR SIDEBARS:
-      <li class="link"><a href="/home/">home</a></li>
-      <li class="link"><a href="/page/about/">about</a></li>
-      <li class="link"><a href="/bulletin/">bulletin</a></li>
+     <li class='link'><a href='/home/'>home</a></li>
+      <li class='link'><a href='/page/about/'>about</a></li>
+      <li class='link'><a href='/bulletin/'>bulletin</a></li>
           <li>
-              <ul class="child">
-                  <li class="link"><a href="/bulletin/news/">news</a></li>
-                  <li class="link"><a href="/bulletin/events/">events</a></li>
-                  <li class="link"><a href="/page/guestbook/">guestbook</a></li>
+              <ul class='child'>
+                  <li class='link'><a href='/bulletin/news/'>news</a></li>
+                  <li class='link'><a href='/bulletin/goals/'>goals</a></li>
+                  <li class='link'><a href='/bulletin/events/'>events</a></li>
+                  <li class='link'><a href='/page/guestbook/'>guestbook</a></li>
               </ul>
           </li>
-      <li class="link"><a href="/work/">work</a></li>
+      <li class='link'><a href='/work/'>work</a></li>
       <li>
-          <ul class="child">
-              <li class="link"><a href="/blog/">blog</a></li>
+          <ul class='child'>
+              <li class='link'><a href='/blog/'>blog</a></li>
+              <li class='link'><a href='/work/poetry/'>poetry</a></li>
           </ul>
       </li>
-      <li class="link"><a href="/shelf/">collections</a></li>
+      <li class='link'><a href='/shelf/'>collections</a></li>
       <li>
-          <ul class="child">
-              <li class="link"><a href="/page/shrines/clocks/">clocks</a></li>
-              <li class="link"><a href="/page/shrines/cameras/">cameras</a></li>
-              <li class="link"><a href="/page/films/">films</a></li>
-              <li class="link"><a href="/page/music/">music</a></li>
+          <ul class='child'>
+              <li class='link'><a href='/page/shrines/clocks/'>clocks</a></li>
+              <li class='link'><a href='/page/shrines/cameras/'>cameras</a></li>
+              <li class='link'><a href='/page/films/'>films</a></li>
+              <li class='link'><a href='/page/music/'>music</a></li>
           </ul>
       </li>
+
       FULL SITEMAP FOR SITEMAP PAGE:
-      <li class="link"><a href="/">entrance</a></li>
+      <li class='link'><a href='/'>entrance</a></li>
             <li>
-                <ul class="child first">
-                    <li class="link"><a href="/home/">home</a></li>
+                <ul class='child first'>
+                    <li class='link'><a href='/home/'>home</a></li>
                     <li>
-                        <ul class="child">
-                            <li class="link"><a href="/page/about/">about</a></li>
-                            <li class="link"><a href="/bulletin/">bulletin</a></li>
+                        <ul class='child'>
+                            <li class='link'><a href='/page/about/'>about</a></li>
+                            <li class='link'><a href='/bulletin/'>bulletin</a></li>
                                 <li>
-                                    <ul class="child">
-                                        <li class="link"><a href="/bulletin/news/">news</a></li>
-                                        <li class="link"><a href="/bulletin/events/">events</a></li>
-                                        <li class="link"><a href="/page/guestbook/">guestbook</a></li>
+                                    <ul class='child'>
+                                        <li class='link'><a href='/bulletin/news/'>news</a></li>
+                                        <li class='link'><a href='/bulletin/goals/'>goals</a></li>
+                                        <li class='link'><a href='/bulletin/events/'>events</a></li>
+                                        <li class='link'><a href='/page/guestbook/'>guestbook</a></li>
                                     </ul>
                                 </li>
-                            <li class="link"><a href="/work/">work</a></li>
+                            <li class='link'><a href='/work/'>work</a></li>
                             <li>
-                                <ul class="child">
-                                    <li class="link"><a href="/blog/">blog</a></li>
+                                <ul class='child'>
+                                    <li class='link'><a href='/blog/'>blog</a></li>
+                                    <li class='link'><a href='/work/poetry/'>poetry</a></li>
                                 </ul>
                             </li>
-                            <li class="link"><a href="/shelf/">collections</a></li>
+                            <li class='link'><a href='/shelf/'>collections</a></li>
                             <li>
-                                <ul class="child">
-                                    <li class="link"><a href="/page/shrines/clocks/">clocks</a></li>
-                                    <li class="link"><a href="/page/shrines/cameras/">cameras</a></li>
-                                    <li class="link"><a href="/page/films/">films</a></li>
-                                    <li class="link"><a href="/page/music/">music</a></li>
+                                <ul class='child'>
+                                    <li class='link'><a href='/page/shrines/clocks/'>clocks</a></li>
+                                    <li class='link'><a href='/page/shrines/cameras/'>cameras</a></li>
+                                    <li class='link'><a href='/page/films/'>films</a></li>
+                                    <li class='link'><a href='/page/music/'>music</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -94,9 +99,9 @@ window.addEventListener("DOMContentLoaded", () => {
             </li>
       https://removelinebreaks.net/
        *********************************************/
-      sitemap.innerHTML = "<li class='link'><a href='/home/'>home</a></li><li class='link'><a href='/page/about/'>about</a></li><li class='link'><a href='/bulletin/'>bulletin</a></li><li><ul class='child'><li class='link'><a href='/bulletin/news/'>news</a></li><li class='link'><a href='/bulletin/events/'>events</a></li><li class='link'><a href='/page/guestbook/'>guestbook</a></li></ul></li><li class='link'><a href='/work/'>work</a></li><li><ul class='child'><li class='link'><a href='/blog/'>blog</a></li></ul></li><li class='link'><a href='/shelf/'>collections</a></li><li><ul class='child'><li class='link'><a href='/page/shrines/clocks/'>clocks</a></li><li class='link'><a href='/page/shrines/cameras/'>cameras</a></li><li class='link'><a href='/page/films/'>films</a></li><li class='link'><a href='/page/music/'>music</a></li></ul></li>"
+      sitemap.innerHTML = "<li class='link'><a href='/home/'>home</a></li><li class='link'><a href='/page/about/'>about</a></li><li class='link'><a href='/bulletin/'>bulletin</a></li><li><ul class='child'><li class='link'><a href='/bulletin/news/'>news</a></li><li class='link'><a href='/bulletin/goals/'>goals</a></li><li class='link'><a href='/bulletin/events/'>events</a></li><li class='link'><a href='/page/guestbook/'>guestbook</a></li></ul></li><li class='link'><a href='/work/'>work</a></li><li><ul class='child'><li class='link'><a href='/blog/'>blog</a></li><li class='link'><a href='/work/poetry/'>poetry</a></li></ul></li><li class='link'><a href='/shelf/'>collections</a></li><li><ul class='child'><li class='link'><a href='/page/shrines/clocks/'>clocks</a></li><li class='link'><a href='/page/shrines/cameras/'>cameras</a></li><li class='link'><a href='/page/films/'>films</a></li><li class='link'><a href='/page/music/'>music</a></li></ul></li>"
     }else {
-      sitemap.innerHTML = "<li class='link'><a href='/'>entrance</a></li><li><ul class='child first'><li class='link'><a href='/home/'>home</a></li><li><ul class='child'><li class='link'><a href='/page/about/'>about</a></li><li class='link'><a href='/bulletin/'>bulletin</a></li><li><ul class='child'><li class='link'><a href='/bulletin/news/'>news</a></li><li class='link'><a href='/bulletin/events/'>events</a></li><li class='link'><a href='/page/guestbook/'>guestbook</a></li></ul></li><li class='link'><a href='/work/'>work</a></li><li><ul class='child'><li class='link'><a href='/blog/'>blog</a></li></ul></li><li class='link'><a href='/shelf/'>collections</a></li><li><ul class='child'><li class='link'><a href='/page/shrines/clocks/'>clocks</a></li><li class='link'><a href='/page/shrines/cameras/'>cameras</a></li><li class='link'><a href='/page/films/'>films</a></li><li class='link'><a href='/page/music/'>music</a></li></ul></li></ul></li></ul></li>"
+      sitemap.innerHTML = "<li class='link'><a href='/'>entrance</a></li><li><ul class='child first'><li class='link'><a href='/home/'>home</a></li><li><ul class='child'><li class='link'><a href='/page/about/'>about</a></li><li class='link'><a href='/bulletin/'>bulletin</a></li><li><ul class='child'><li class='link'><a href='/bulletin/news/'>news</a></li><li class='link'><a href='/bulletin/goals/'>goals</a></li><li class='link'><a href='/bulletin/events/'>events</a></li><li class='link'><a href='/page/guestbook/'>guestbook</a></li></ul></li><li class='link'><a href='/work/'>work</a></li><li><ul class='child'><li class='link'><a href='/blog/'>blog</a></li><li class='link'><a href='/work/poetry/'>poetry</a></li></ul></li><li class='link'><a href='/shelf/'>collections</a></li><li><ul class='child'><li class='link'><a href='/page/shrines/clocks/'>clocks</a></li><li class='link'><a href='/page/shrines/cameras/'>cameras</a></li><li class='link'><a href='/page/films/'>films</a></li><li class='link'><a href='/page/music/'>music</a></li></ul></li></ul></li></ul></li>"
     }
     
     updateSitemapVisitedLinks();

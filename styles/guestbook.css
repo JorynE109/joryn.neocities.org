@@ -21,26 +21,7 @@ hr{
     padding: 10px;
     width: 100%;
 }
-ul{
-    list-style: none;
-    list-style-type: none;
-}
-#updateslist li{
-    margin: 0.5rem 0 0.5rem 0;
-    padding: 0.5rem 0 0.5rem 0;
-
-    display: block;
-    border-top: solid black 1px;
-}
-#updateslist .updatetitle{
-    font-weight: 600;
-}
-#updateslist .date{
-    font-style: italic;
-    font-size: 12px;
-}
-#updateslist .date::before{
-    content: ">> ";
-    font-style: italic;
-    font-size: 12px;
+iframe{
+    height: 100%;
+    min-height: 86vh;
 }

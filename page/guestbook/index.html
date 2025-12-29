@@ -4,9 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guestbook</title>
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/guestbook.css">
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
     <script src="/js/main.js" defer></script>
 </head>
-<body style="margin:0; padding:0; height:100vh; overflow:hidden;">
-    <iframe src="https://joryn.atabook.org/" style="width: 100%; height: 100%;"></iframe>
-</body> 
+
+<body>
+    <div class="wrapper">
+        <div id="content">
+            <div id="back"><a href="/bulletin/">back to bulletin</a></div>
+            <h1>Events</h1>
+            <p>All the events I'll participate in or run on here</p>
+            <hr>
+            <main>
+                <iframe src="https://joryn.atabook.org/" style="width: 100%; height: 100%;"></iframe>
+            </main>
+        </div>
+        <div id="sidebar">
+            <h3>Quick Nav</h3>
+            <p>Recent Pages</p>
+            <ul id="recentPages">
+                <li><a href="#">link</a></li>
+            </ul>
+            <hr>
+            <p>Sitemap</p>
+            <ul id="sitemap" class="sitemap short">
+            </ul>
+            <a href="/page/info/sitemap/">full sitemap</a>
+        </div>
+    </div>
+</body>
 </html>
