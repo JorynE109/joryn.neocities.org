@@ -1,12 +1,15 @@
 :root{
-    --background-color: #898c6f;
-    --text-color: #060a0a;
-    --link-color: #262262;
+    --background-color: #131313;
+    --text-color: #a53c3c;
+    --link-color: #a382c0;
+    --link-color-dark: #402c51;
+    --background-light: #f0eded;
 }
+/* #705c82 */
 body{
     font-size: 16px;
     font-family: 'Courier New', Courier, monospace;
-    background-image: url('/img/backgrounds/green-pattern-repeating.jpg');
+    background-image: url('/img/backgrounds/red-cross.jpg');
     background-size: 300px;
     color: var(--text-color);
 }
@@ -25,17 +28,17 @@ hr{
     width: 100%;
 }
 a{
-    color: #262262;
+    color: var(--link-color);
 }
 #back a{
-    background-color: #262262;
-    color: #939270;
+    background-color: var(--text-color);
+    color: var(--background-color);
 }
 header{
     width: 100%;
     height: fit-content;
-    border-bottom: solid 1px black;
-    background-color: #898c6f;
+    border-bottom: solid 1px var(--text-color);
+    background-color: var(--background-color);
     padding: 1rem;
 }
 h2{
@@ -59,22 +62,29 @@ h2{
     gap: 1rem;
 }
 #albumholder .album{
-    width: calc(50% - 0.5rem);
+    width: 100%;
 }
 .album img{
     width: 100%;
 }
 .album{
-    background-color: #fff;
-    padding: 20px;
+    background-color: #cbc0c0;
+    padding: 12px;
     text-align: center;
     width: fit-content;
-    border-radius: 10px;
+    border-radius: 6px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+}
+.album:hover{
+    background-color: var(--background-light);
 }
 .albumdetails{
     width: 100%;
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
 }
 .albumtitle{
     font-size: 18px;
@@ -90,14 +100,43 @@ h2{
 .albumartist:hover{
     text-decoration: underline;
 }
+.album a{
+    color: var(--link-color-dark);
+    font-weight: 600;
+}
+.description{
+    color: var(--background-color);
+    text-align: left;
+}
+.date{
+    font-style: italic;
+}
+.date::before{
+    content: ">> ";
+    font-style: italic;
+}
+
+#favouritesongs{
+    display: flex;
+    overflow-y: auto;
+    gap: 0.5rem;
+    width: 140px;
+}
 
 .song{
-    background-color: #fff;
+    background-color: var(--background-light);
     padding: 10px;
     text-align: center;
-    width: fit-content;
     border-radius: 5px;
+    min-width: 140px;
+    position: relative;
+    text-decoration: none;
 }
 .song img{
     width: 100%;
+}
+.song p, .song a{
+    color: var(--link-color-dark);
+    text-decoration: none;
+    font-weight: 600;
 }

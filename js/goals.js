@@ -7,11 +7,11 @@ const goals = {
         "Create full page for updates",
         "Create full page for events",
         "Create full page for guestbook",
-        "Complete sitemap"
+        "Complete sitemap",
+        "update a few music recs"
     ],
     incomplete: [
         "Fix chattable",
-        "update music recs",
         "Get site up in a functional state",
         "Create first post on poetry page",
         "update film recs",

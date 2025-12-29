@@ -1,8 +1,14 @@
+:root{
+    --background-color: #898c6f;
+    --text-color: #060a0a;
+    --link-color: #262262;
+}
 body{
-    background-color: rgb(74, 21, 131);
-    background-image: url('/img/backgrounds/skull.jpg');
+    font-size: 16px;
+    font-family: 'Courier New', Courier, monospace;
+    background-image: url('/img/backgrounds/green-pattern-repeating.jpg');
     background-size: 300px;
-    background-repeat: repeat;
+    color: var(--text-color);
 }
 .wrapper{
     background-color: var(--background-color);
