@@ -11,10 +11,14 @@
     <script src="/js/chat.js"></script>
     <script src="/js/main.js" defer></script>
 </head>
+
 <body>
     <div class="wrapper">
-    <div id="back"><a href="/home/">back to home</a></div>
-        <h1>About Joryn</h1>
+        <div id="content">
+            <div id="back"><a href="/home/">back to home</a></div>
+            <h1>About me</h1>
+            <p>Here's all my personal info! I'm sure this isn't a bad idea to post online!</p>
+            <main>
         <table>
             <tr>
                 <td style="padding-right: 20px;">
@@ -120,7 +124,22 @@
                 </td>
             </tr>
         </table>
+            </main>
+        </div>
+        <div id="sidebar">
+            <h3>Quick Nav</h3>
+            <p>Recent Pages</p>
+            <ul id="recentPages">
+                <li><a href="#">link</a></li>
+            </ul>
+            <hr>
+            <p>Sitemap</p>
+            <ul id="sitemap" class="sitemap short">
+            </ul>
+            <a href="/page/info/sitemap/">full sitemap</a>
+        </div>
     </div>
+
     <div id="chatHolder">
         <iframe src="https://iframe.chat/embed?chat=83732559" id="chattable" height="100%"></iframe>
     </div>

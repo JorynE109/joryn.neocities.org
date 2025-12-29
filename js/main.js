@@ -18,6 +18,14 @@ window.addEventListener("DOMContentLoaded", () => {
   if (!visitedPages.includes(currentPage)) {
     visitedPages.push(currentPage);
     localStorage.setItem("visitedPages", JSON.stringify(visitedPages));
+  }  
+  
+  let recentlyVisitedPages = JSON.parse(localStorage.getItem("recentlyVisitedPages")) || [];
+  recentlyVisitedPages = recentlyVisitedPages.map(normalizePath);
+
+  if (recentlyVisitedPages) {
+    recentlyVisitedPages.unshift(currentPage);
+    localStorage.setItem("recentlyVisitedPages", JSON.stringify(recentlyVisitedPages));
   }
 
   function updateSitemapLinks(){
@@ -132,4 +140,43 @@ window.addEventListener("DOMContentLoaded", () => {
       li.classList.add('alt');
   }
   });
+
+
+  // get page title from link
+
+  // update recentPagesList with innerHTML of 
+
+  const recentPagesList = document.getElementById('recentPages');
+  let recentPagesListHTML = [];
+
+  function updateRecentlyVisited(){
+    // recentPagesList.innerHTML = `${recentlyVisitedPages}`;
+    recentlyVisitedPages.forEach((page)=> {
+      let path = page.split("/");
+      console.log(path);
+      let curPage = null;
+      if (path[path.length - 2]){
+        curPage = path[path.length - 2];
+      }
+
+      recentPagesListHTML.push(`<li><a href='${page}' class='recentLink'>${curPage}</a></li>`);
+    });
+
+    const MAX_ITEMS = 3;
+    const seen = new Set();
+
+    const uniqueRplHTML = recentPagesListHTML
+      .slice(1)
+      .filter(item => {
+        if (seen.has(item)) return false;
+        seen.add(item);
+        return true;
+      })
+      .slice(0, MAX_ITEMS);
+
+    recentPagesList.innerHTML = uniqueRplHTML.join("");
+  }
+  if (recentPagesList){
+    updateRecentlyVisited();
+  }
 });

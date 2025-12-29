@@ -4,18 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>News</title>
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/news.css">
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
     <script src="/js/main.js" defer></script>
 </head>
-<body>
-    <h1>News</h1>
-    <main>
-        <div id="updates">
-            <h2>Updates</h2>
-            <ul id="updateslist">
 
-            </ul>
+<body>
+    <div class="wrapper">
+        <div id="content">
+            <div id="back"><a href="/bulletin/">back to bulletin</a></div>
+            <h1>News</h1>
+            <p>All the updates you need >:D</p>
+            <main>
+                <ul id="updateslist">
+
+                </ul>
+            </main>
         </div>
-    </main>
+        <div id="sidebar">
+            <h3>Quick Nav</h3>
+            <p>Recent Pages</p>
+            <ul id="recentPages">
+                <li><a href="#">link</a></li>
+            </ul>
+            <hr>
+            <p>Sitemap</p>
+            <ul id="sitemap" class="sitemap short">
+            </ul>
+            <a href="/page/info/sitemap/">full sitemap</a>
+        </div>
+    </div>
 <script>
 const updateslist = document.getElementById("updateslist");
 const updatesArray = [];

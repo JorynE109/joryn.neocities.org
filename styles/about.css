@@ -1,14 +1,30 @@
+:root{
+    --background-color: #fddce4;
+    --text-color: #544540;
+}
 body{
-    background-color: brown;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #544540;
+    background-image: url('/img/backgrounds/cybersil.jpg');
+    background-size: 200px;
+    background-repeat: repeat;
+    color: var(--text-color);
+}
+#back a{
+    color: var(--text-color);
 }
 .wrapper{
-    padding: 20px;
     background-color: var(--background-color);
-    min-height: 100vh;
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
 }
-h1{
-    text-align: center;
-    margin-bottom: 20px;
+hr{
+    margin: 1rem 0;
+}
+#content{
+    padding: 10px;
 }
 #bio{
     margin-top: 1rem;
@@ -71,7 +87,4 @@ th{
     display: block;
     width: 100%;
     padding: 5px;
-}
-.hr{
-    border-top: solid 1px brown;
 }

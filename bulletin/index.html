@@ -11,21 +11,31 @@
     <script src="/js/main.js" defer></script>
 </head>
 <body>
-    <div id="back"><a href="/home/">back to home</a></div>
     <div class="wrapper">
-        
+        <header>
+            <div id="back"><a href="/home/">back to home</a></div>
             <h1 id="heading">Bulletin Board</h1>
-            <div id="table">
-                <div id="news">
-                    <iframe src="news/"></iframe>
-                </div>
-                <div id="events">
-                    <iframe src="events/"></iframe>
-                </div>
-                <div id="goals">
-                    <iframe src="goals/"></iframe>
-                </div>
+            <p>:)</p>
+        </header>
+        <div id="table">
+            <div id="news">
+                <h2>News</h2>
+                <ul id="updateslist"></ul>
+                <hr>
+                <a href="/bulletin/news/">All updates</a>
             </div>
+            <div id="goals">
+                <h2>Goals</h2>
+                <ul id="goalsContainer"></ul>
+                <a href="/bulletin/goals/">Visit Goals Page</a>
+            </div>
+            <div id="events">
+                <h2>Events</h2>
+                <p>Nothing planned yet, check back in!</p>
+                <hr>
+                <a href="/bulletin/events/">All Events</a>
+            </div>
+        </div>
     </div>
     <div id="guestChatWrap">
         <div id="guestbook">
@@ -40,5 +50,42 @@
             stylesheet: "/styles/chat.css" // path to custom stylesheet
         });
     </script>
+<script>
+const updateslist = document.getElementById("updateslist");
+const updatesArray = [];
+
+async function loadUpdates() {
+    try {
+        const response = await fetch('/bulletin/updates.json');
+        const updates = await response.json();
+
+        console.log("Raw JSON:", updates);
+
+        for (const update of updates) {
+            const { title, date, content } = update;
+            updatesArray.push({ title, date, content });
+        }
+
+        console.log("Processed updatesArray:", updatesArray);
+
+        updatesArray.slice().reverse().forEach(Object => {
+            const li = document.createElement('li');
+            li.className = 'update';
+            li.innerHTML = `<p class="updatetitle">${Object.title}</p><p class="date">${Object.date}</p><p class="content">${Object.content}</p>`;
+            updateslist.appendChild(li);
+        });
+
+
+    } catch (err) {
+        console.error('Error loading updates:', err);
+    }
+}
+
+// Call the function
+loadUpdates();
+
+</script>
+
+<script src="/js/goals.js"></script>
 </body>
 </html>
