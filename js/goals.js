@@ -18,6 +18,7 @@ const goals = {
         "Add chattable to every page",
         "Add games and interactivity back",
         "Add credits page and info",
+        "Add comments to pages",
         "Add quizzes",
         "Add to events page"
     ]

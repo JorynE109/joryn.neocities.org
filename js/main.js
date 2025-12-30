@@ -159,7 +159,7 @@ window.addEventListener("DOMContentLoaded", () => {
     recentlyVisitedPages.forEach((page)=> {
       let path = page.split("/");
       console.log(path);
-      let curPage = null;
+      let curPage = "entrance";
       if (path[path.length - 2]){
         curPage = path[path.length - 2];
       }
