@@ -1,17 +1,50 @@
-:root{
-    --background-color: #fddce4;
-    --text-color: #544540;
+/* :root{
+    --background-color: #7a70b4;
+    --text-color: #000000;
 }
 body{
     font-family: 'Courier New', Courier, monospace;
     background-color: #544540;
-    background-image: url('/img/backgrounds/cybersil.jpg');
+    background-image: url('/img/backgrounds/purple-cross.jpg');
+    background-size: 200px;
+    background-repeat: repeat;
+    color: var(--text-color);
+} */
+/* :root{
+    --background-color: #090909;
+    --text-color: #9b1b1c;
+}
+body{
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #544540;
+    background-image: url('/img/backgrounds/red-cross-2.jpg');
     background-size: 200px;
     background-repeat: repeat;
     color: var(--text-color);
 }
-#back a{
+.wrapper{
+    background-color: #544540;
+    background-image: url('/img/backgrounds/black-noise.jpg');
+    background-size: 400px;
+    background-repeat: repeat;
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+} */
+:root{
+    --background-color: #9a8eac;
+    --text-color: #121117;
+}
+body{
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #544540;
+    background-image: url('/img/backgrounds/purp-green-abstract-large.png');
+    background-size: 900px;
+    background-repeat: repeat;
     color: var(--text-color);
+    position: relative;
+    z-index: -99;
 }
 .wrapper{
     background-color: var(--background-color);
@@ -19,6 +52,9 @@ body{
     display: flex;
     flex-direction: row;
     padding: 0;
+}
+#back a{
+    color: var(--text-color);
 }
 hr{
     margin: 1rem 0;
@@ -35,14 +71,17 @@ hr{
 #info td{
     display: block;
     padding: 10px;
-    border: solid 1px brown;
+    border: solid 1px var(--text-color);
     margin: 0;
+}
+#selfPortrait{
+    max-width: 200px;
 }
 #info td:not(:first-child){
     border-left: none;
 }
 .interests td{
-    width: 200px;
+    width: 100%;
     padding: 0.5rem;
 }
 .interests ul li{
@@ -51,15 +90,21 @@ hr{
 }
 .interests ul li::before{
     content: '✧';
-    color: brown;
+    color: var(--text-color);
     margin-right: 0.5rem;
 }
 #chatHolder{
     position: fixed;
     right: 0;
     top: 0;
-    height: 500px;
+    min-height: 500px;
     background-color: var(--background-color);
+    transform: rotate(0deg);
+    z-index: -9;
+}
+#chatHolder:hover, #chatHolder:active{
+    transform: translate(0, 0) rotate(0deg);
+    z-index: 9;
 }
 .interest{
     display: flex;
@@ -73,7 +118,7 @@ hr{
     padding-left: 1rem;
     cursor: pointer;
     opacity: 0;
-    color: brown;
+    color: var(--text-color);
 }
 .likeButton.liked, .dislikeButton.hates{
     opacity: 1;
@@ -83,8 +128,19 @@ hr{
 }
 th{
     font-size: 18px;
-    background-color: rgba(165, 42, 42, 0.24);
+    background-color: rgba(37, 6, 6, 0.24);
     display: block;
     width: 100%;
     padding: 5px;
+}
+#favourites{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+#incompleteGoalsContainer{
+    max-height: 200px;
+    overflow-y: auto;
+}
+#incompleteGoalsContainer li{
+    display: flex;
 }

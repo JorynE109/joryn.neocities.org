@@ -59,7 +59,7 @@ table tr td{
     transition: all 1s ease;
 }
 #chatHolder:hover{
-    transform: translateX(-150px) rotate(-2deg);
+    transform: translateX(-150px) rotate(0deg);
  
 }
 #chatHolder iframe{

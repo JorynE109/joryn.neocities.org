@@ -8,14 +8,14 @@ const goals = {
         "Create full page for events",
         "Create full page for guestbook",
         "Complete sitemap",
-        "update a few music recs"
+        "update a few music recs",
+        "Fix chattable",
+        "Get site up in a functional state"
     ],
     incomplete: [
-        "Fix chattable",
-        "Get site up in a functional state",
         "Create first post on poetry page",
         "update film recs",
-        "Add quizzes",
+        "Add chattable to every page",
         "Add games and interactivity back",
         "Add credits page and info",
         "Add quizzes",
@@ -23,15 +23,24 @@ const goals = {
     ]
 }
 const goalsContainer = document.getElementById("goalsContainer");
-const goalsListHTML = [];
+const completeGoalsContainer = document.getElementById("completeGoalsContainer");
+const incompleteGoalsContainer = document.getElementById("incompleteGoalsContainer");
+
+const allGoalsListHTML = [];
+const completeGoalsListHTML = [];
+const incompleteGoalsListHTML = [];
 
 goals.complete.forEach(goal => {
-    goalsListHTML.push(`<li class='complete'><p>${goal}</p></li>`);
+    allGoalsListHTML.push(`<li class='complete'><p>${goal}</p></li>`);
+    completeGoalsListHTML.push(`<li class='complete'><p>${goal}</p></li>`);
 });
 
 goals.incomplete.forEach(goal => {
-    goalsListHTML.push(`<li class='incomplete'><p>${goal}</p></li>`);
+    allGoalsListHTML.push(`<li class='incomplete'><p>${goal}</p></li>`);
+    incompleteGoalsListHTML.push(`<li class='incomplete'><p>${goal}</p></li>`);
 });
 
-goalsContainer.innerHTML = goalsListHTML.join("");
+if (goalsContainer) goalsContainer.innerHTML = allGoalsListHTML.join("");
+if (completeGoalsContainer) completeGoalsContainer.innerHTML = completeGoalsListHTML.join("");
+if (incompleteGoalsContainer) incompleteGoalsContainer.innerHTML = incompleteGoalsListHTML.join("");
 });

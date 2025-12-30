@@ -54,7 +54,7 @@ img{
     transition: all 1s ease;
 }
 #chatHolder:hover, #chatHolder:active{
-    transform: translateX(-150px) rotate(-2deg);
+    transform: translateX(-150px) rotate(0deg);
 }
 #chatHolder iframe{
     height: 100%;
