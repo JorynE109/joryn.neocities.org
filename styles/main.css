@@ -53,15 +53,16 @@ table tr td{
     position: absolute;
     margin: 1rem;
     bottom: 0;
-    right: -150px;
+    right: 0;
+    /* right: -150px;
     transform: rotate(5deg);
     transform-origin: bottom;
-    transition: all 1s ease;
+    transition: all 1s ease; */
 }
-#chatHolder:hover{
+/* #chatHolder:hover{
     transform: translateX(-150px) rotate(0deg);
  
-}
+} */
 #chatHolder iframe{
     height: 100%;
     min-height: 300px;

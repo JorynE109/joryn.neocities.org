@@ -136,9 +136,18 @@ ul{
     content: "☐";
     padding: 0 0.5rem 0 0.5rem;
 }
+#hitcounter{
+    background-color: #ffe600;
+    padding: 0.5rem;
+    width: fit-content;
+    position: fixed;
+    top: 2rem;
+    left: 2rem;
+}
 @media screen and (max-width: 1650px){
     body{
         overflow-y: auto;
+        height: 100vh;
     }
     .wrapper{
         overflow-y: auto;
@@ -146,6 +155,7 @@ ul{
     #guestChatWrap{
         margin: 1rem auto;
         width: 900px;
+        overflow-y: auto;
     }
     #guestbook{
         width: calc(50% - 1rem);
@@ -154,6 +164,9 @@ ul{
         min-height: 500px;
         transform: rotate(0);
     }
+    #guestbook iframe{
+        height: 100%;
+    }
     #chatHolder{
         width: calc(50% - 2rem);
         display: inline-block;
@@ -161,5 +174,11 @@ ul{
         transform: none;
         right: 0;
         top: 0;
+    }
+    #chatHolder:hover{
+        transform: 0;
+    }
+    #hitcounter{
+        position: relative;
     }
 }

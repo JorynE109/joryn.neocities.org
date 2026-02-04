@@ -23,5 +23,10 @@
         "title": "Added a links page to home",
         "date": "2026-02-04",
         "content": "<a href='/page/links/'>Links</a> now live"
+    },
+    {
+        "title": "Added a hit count tracker",
+        "date": "2026-02-04",
+        "content": "See it on the <a href='/bulletin/'>Bulletin</a>"
     }
 ]
