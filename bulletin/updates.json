@@ -18,5 +18,10 @@
         "title": "Added my first poem",
         "date": "2026-02-04",
         "content": "Check it out at <a href='/work/poetry/'>Poetry</a>"
+    },
+    {
+        "title": "Added a links page to home",
+        "date": "2026-02-04",
+        "content": "<a href='/page/links/'>Links</a> now live"
     }
 ]
