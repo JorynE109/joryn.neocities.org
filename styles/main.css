@@ -51,9 +51,9 @@ table tr td{
     min-height: 300px;
     width: 300px;
     position: absolute;
+    margin: 1rem;
     bottom: 0;
     right: -150px;
-    margin: 1rem;
     transform: rotate(5deg);
     transform-origin: bottom;
     transition: all 1s ease;

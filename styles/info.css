@@ -1,0 +1,54 @@
+:root{
+    --background-color: #1A2E12;
+    --text-color: #e0dedc;
+    --link-color: #a87cc7;
+    --link-color-dark: #402c51;
+    --background-light: #f0eded;
+}
+/* #705c82 */
+body{
+    font-size: 16px;
+    font-family: 'Courier New', Courier, monospace;
+    background-image: url('/img/backgrounds/stained-glass-seamless.jpg');
+    background-size: 300px;
+    color: var(--text-color);
+}
+.wrapper{
+    background-color: var(--background-color);
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+}
+hr{
+    margin: 1rem 0;
+}
+#content{
+    padding: 10px;
+    width: 100%;
+}
+a{
+    color: var(--link-color);
+}
+#back a{
+    background-color: var(--text-color);
+    color: var(--background-color);
+}
+header{
+    width: 100%;
+    height: fit-content;
+    border-bottom: solid 1px var(--text-color);
+    background-color: var(--background-color);
+    padding: 1rem;
+}
+h2{
+    font-size: 20px;
+    margin-bottom: 0.5rem;
+}
+.flex-row{
+    display: flex;
+    flex-direction: row;
+}
+li{
+    list-style: none;
+}
