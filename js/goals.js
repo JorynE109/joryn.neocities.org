@@ -10,10 +10,10 @@ const goals = {
         "Complete sitemap",
         "update a few music recs",
         "Fix chattable",
-        "Get site up in a functional state"
+        "Get site up in a functional state",
+        "Create first post on poetry page"
     ],
     incomplete: [
-        "Create first post on poetry page",
         "update film recs",
         "Add chattable to every page",
         "Add games and interactivity back",

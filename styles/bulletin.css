@@ -93,7 +93,7 @@ ul{
     font-style: italic;
     font-size: 12px;
 }
-#news a{
+.button{
     display: block;
     font-weight: 600;
     text-decoration: underline;

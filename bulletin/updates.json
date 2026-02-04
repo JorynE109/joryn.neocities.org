@@ -8,5 +8,15 @@
         "title": "BIG RESET",
         "date": "2025-10-23",
         "content": "This is to commemerate a big redesign project I have been undertaking, completely resetting this whole site. I deleted all previous update posts as many no longer apply."
+    },
+    {
+        "title": "Removed username assignment",
+        "date": "2026-02-04",
+        "content": "I removed the automatic username assignment I was trying to impliment with chattable because it was kinda broken and I couldn't figure out how to fix it."
+    },
+    {
+        "title": "Added my first poem",
+        "date": "2026-02-04",
+        "content": "Check it out at <a href='/work/poetry/'>Poetry</a>"
     }
 ]
