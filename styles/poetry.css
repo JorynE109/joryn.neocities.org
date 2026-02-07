@@ -28,7 +28,6 @@ hr{
     width: 100%;
 }
 article{
-    margin-top: 1rem;
-    padding-top: 1rem;
-    border-top: solid var(--text-color) 1px;
+    background-color: #f7f4eb;
+    padding: 1rem;
 }

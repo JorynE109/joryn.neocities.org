@@ -136,13 +136,19 @@ ul{
     content: "☐";
     padding: 0 0.5rem 0 0.5rem;
 }
-#hitcounter{
+#hitcounter, #lastUpdated{
     background-color: #ffe600;
     padding: 0.5rem;
     width: fit-content;
     position: fixed;
+}
+#hitcounter{
     top: 2rem;
     left: 2rem;
+}
+#lastUpdated{
+    top: 2rem;
+    right: 2rem;
 }
 @media screen and (max-width: 1650px){
     body{

@@ -44,6 +44,12 @@
                 <span id="hitcount"></span>
             </p>
         </div>
+        <div id="lastUpdated">
+            <h3>Last Updated:</h3>
+            <p>
+                <span id="lastupdate"></span>
+            </p>
+        </div>
         <div id="guestbook">
             <iframe src="https://joryn.atabook.org/"></iframe>
         </div>
@@ -90,6 +96,23 @@ async function loadUpdates() {
 // Call the function
 loadUpdates();
 
+</script>
+
+<script>
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        var site_data = JSON.parse(this.responseText);
+
+        var date_obj = new Date(site_data.info.last_updated);
+        var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+        document.getElementById("lastupdate").innerHTML = days[date_obj.getDay()] + " " + months[date_obj.getMonth()] + " " + date_obj.getDate() + ", " + date_obj.getFullYear();
+
+    }
+  };
+  xhttp.open("GET", "https://weirdscifi.ratiosemper.com/neocities.php?sitename=joryn", true);
+  xhttp.send();
 </script>
 
 
