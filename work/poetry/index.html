@@ -7,6 +7,7 @@
     <link rel="icon" href="/img/favicon.ico" type="image/x-icon"/>
     <link rel="stylesheet" href="/styles/main.css">
     <link rel="stylesheet" href="/styles/poetry.css">
+    <link rel="stylesheet" href="/styles/layout.css">
     <script src="/js/main.js" defer></script>
 </head>
 <body>
@@ -57,15 +58,20 @@
         </div>
         <div id="sidebar">
             <h3>Quick Nav</h3>
-            <p>Recent Pages</p>
-            <ul id="recentPages">
-                <li><a href="#">link</a></li>
-            </ul>
-            <hr>
-            <p>Sitemap</p>
-            <ul id="sitemap" class="sitemap short">
-            </ul>
-            <a href="/page/info/sitemap/">full sitemap</a>
+            <div id="sidebarWrapper">
+                <div id="recents">
+                    <p>Recent Pages</p>
+                    <ul id="recentPages">
+                        <li><a href="#">link</a></li>
+                    </ul>
+                </div>
+                <div id="sidebarSitemap">
+                    <p>Sitemap</p>
+                    <ul id="sitemap" class="sitemap short">
+                    </ul>
+                    <a href="/page/info/sitemap/">full sitemap</a>
+                </div>
+            </div>
         </div>
     </div>
     <div id="chatHolder">

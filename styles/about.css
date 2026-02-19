@@ -33,8 +33,8 @@ body{
     padding: 0;
 } */
 :root{
-    --background-color: #9a8eac;
-    --text-color: #121117;
+    --background-color: #d6c8ea;
+    --text-color: #111016;
 }
 body{
     font-family: 'Courier New', Courier, monospace;
@@ -49,8 +49,6 @@ body{
 .wrapper{
     background-color: var(--background-color);
     padding: 1rem;
-    display: flex;
-    flex-direction: row;
     padding: 0;
 }
 #back a{

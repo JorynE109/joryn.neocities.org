@@ -1,0 +1,55 @@
+.wrapper{
+    max-width: 900px;
+    margin: auto;
+    height: 100vh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: row;
+}
+#sidebar{
+    border-left: solid var(--border-color) 1px;
+    width: 162px;
+    padding: 10px;
+}
+#sidebarWrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+#sidebar li{
+    margin-left: 0.5rem;
+}
+@media screen and (max-width: 900px) {
+    .wrapper{
+        flex-direction: column;
+        gap: 1rem;
+    }
+    #chatHolder{
+        position: relative;
+        width: 90%;
+        margin: auto;
+        flex-direction: column;
+    }
+    #sidebar{
+        border-top: solid 1px var(--text-color);
+        width: 100%;
+    }
+    #sidebarWrapper{
+        flex-direction: row;
+    }
+    #sidebarWrapper>div{
+        width: 50%;
+    }
+}
+@media screen and (max-width: 600px) {
+    #sidebar{
+        border-top: solid 1px var(--text-color);
+        width: 100%;
+    }
+    #sidebarWrapper{
+        flex-direction: column;
+    }
+    #sidebarWrapper>div{
+        width: 100%;
+    }
+}
