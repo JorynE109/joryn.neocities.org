@@ -7,6 +7,7 @@ body{
 .wrapper{
     max-width: 900px;
     height: 90vh;
+    margin: auto;
 }
 header{
     display: flex;
@@ -16,7 +17,6 @@ header{
     background-color: #ffe600;
     padding: 10px;
     width: 100%;
-    margin: auto;
 }
 hr{
     margin-bottom: 0.5rem;
