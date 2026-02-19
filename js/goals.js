@@ -9,13 +9,13 @@ const goals = {
         "Create full page for guestbook",
         "Complete sitemap",
         "update a few music recs",
-        "Fix chattable",
+        "Fix chat",
+        "Add chat to every page",
         "Get site up in a functional state",
         "Create first post on poetry page"
     ],
     incomplete: [
         "update film recs",
-        "Add chattable to every page",
         "Add games and interactivity back",
         "Add credits page and info",
         "Add comments to pages",

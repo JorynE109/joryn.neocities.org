@@ -93,7 +93,7 @@ hr{
     color: var(--text-color);
     margin-right: 0.5rem;
 }
-#chatHolder{
+/* #chatHolder{
     position: fixed;
     right: 0;
     top: 0;
@@ -105,7 +105,7 @@ hr{
 #chatHolder:hover, #chatHolder:active{
     transform: translate(0, 0) rotate(0deg);
     z-index: 9;
-}
+} */
 .interest{
     display: flex;
     align-items: center;
