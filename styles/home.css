@@ -16,6 +16,7 @@ main{
     "desk desk shelf"
     "not not phone";
     gap: 6rem;
+    transition: transform 200ms ease-out;
 }
 img{
     width: 100%;

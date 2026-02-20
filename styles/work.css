@@ -7,17 +7,32 @@ h1{
     font-family: 'Courier New', Courier, monospace;
     text-align: center;
 }
-.wrapper{
-    background-image: url('/img/page/work/desktop-dithered.png');
+.desk{
+    background-image: url('/img/desk.png');
     background-size: cover;
     background-position: center;
-    width: calc(1036px*0.8);
+    width: calc(1036px*1);
+    height: calc(500px*1);
+}
+.wrapper{
+    position: relative;
+    width: fit-content;
+    margin: 0 auto;
+}
+.layer-1{
+    transition: transform 200ms ease-out;
+    margin: auto;
+    margin-top: 300px;
+}
+.layer-2{
+    /* width: calc(1036px*0.8);
     height: calc(500px*0.8);
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    overflow: visible;
+    overflow: visible; */
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    margin-top: -700px;
+    transition: transform 200ms ease-out;
 }
 header{
     max-width: 900px;

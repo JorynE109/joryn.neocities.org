@@ -38,5 +38,10 @@
         "title": "Added chat to every page",
         "date": "2026-02-19",
         "content": "Say hi! I also switched to cbox, as chattable has been targeted by attacks making the service unreliable."
+    },
+    {
+        "title": "Added parallax effect",
+        "date": "2026-02-20",
+        "content": "Added a mouse hover parallax effect on the home page and work page, might be trying this out more accross the site so hopefully you like it lol."
     }
 ]
