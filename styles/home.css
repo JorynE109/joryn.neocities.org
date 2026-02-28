@@ -5,17 +5,17 @@ body{
     overflow: hidden;
 }
 main{
-    width:90vw;
-    height: calc(80vh - 50px);
+    width:120vw;
+    height: 90vh;
     margin: auto;
     margin-top: 50px;
     margin-left: -100px;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     grid-template-areas: 
-    "weather bulletin portrait shelf"
-    "weather desk desk shelf"
-    "weather desk desk phone";
+    "weather bulletin portrait shelf chat"
+    "weather desk desk shelf chat"
+    "weather desk desk phone chat";
     gap: 6rem;
     transition: transform 200ms ease-out;
 }
@@ -76,6 +76,11 @@ img{
 }
 #weather:hover .tooltip{
     opacity: 1;
+}
+#chatHolder{
+    position: relative;
+    width: 100%;
+    height: 100;
 }
 @keyframes floating-1 {
     0% {

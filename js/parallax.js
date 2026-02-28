@@ -1,4 +1,5 @@
 var //$layer_0 = $('.layer-0'),
+    $layer_0 = document.querySelector('.layer-0'),
     $layer_1 = document.querySelector('.layer-1'),
     $layer_2 = document.querySelector('.layer-2'),
     //$x_axis  = $('#x-axis'),
@@ -20,6 +21,7 @@ window.addEventListener('mousemove', function(event){
   left = container_w / 2 - pos_x;
   top  = container_h / 2 - pos_y;
 
+  if ($layer_0) $layer_0.style.transform = 'translateX(' + left / 2 + 'px) translateY(' + top + 'px)';
   if ($layer_1) $layer_1.style.transform = 'translateX(' + left / 4 + 'px) translateY(' + top / 2 + 'px)';
   if ($layer_2) $layer_2.style.transform = 'translateX(' + left / 12 + 'px) translateY(' + top / 6 + 'px)' ;
 
