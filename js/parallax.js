@@ -20,8 +20,8 @@ window.addEventListener('mousemove', function(event){
   left = container_w / 2 - pos_x;
   top  = container_h / 2 - pos_y;
 
-  $layer_1.style.transform = 'translateX(' + left / 4 + 'px) translateY(' + top / 2 + 'px)';
-  $layer_2.style.transform = 'translateX(' + left / 12 + 'px) translateY(' + top / 6 + 'px)' ;
+  if ($layer_1) $layer_1.style.transform = 'translateX(' + left / 4 + 'px) translateY(' + top / 2 + 'px)';
+  if ($layer_2) $layer_2.style.transform = 'translateX(' + left / 12 + 'px) translateY(' + top / 6 + 'px)' ;
 
   
 

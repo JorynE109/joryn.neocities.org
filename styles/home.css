@@ -5,16 +5,17 @@ body{
     overflow: hidden;
 }
 main{
-    width:60vw;
+    width:90vw;
     height: calc(80vh - 50px);
     margin: auto;
     margin-top: 50px;
+    margin-left: -100px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-template-areas: 
-    "bulletin portrait shelf"
-    "desk desk shelf"
-    "not not phone";
+    "weather bulletin portrait shelf"
+    "weather desk desk shelf"
+    "weather desk desk phone";
     gap: 6rem;
     transition: transform 200ms ease-out;
 }
@@ -46,12 +47,36 @@ img{
 
 #phone{
     grid-area: phone;
-    margin-top: -300px;
+    margin-top: 100px;
     animation: floating-4 15s ease infinite;
     width: 80%;
 
 }
-
+#weather{
+    grid-area: weather;
+    color: white;
+    position: relative;
+    height: fit-content;
+}
+#weatherHeader{
+    display: flex;
+}
+#weatherData{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+#weather .tooltip{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% -50%);
+}
+#weather:hover .tooltip{
+    opacity: 1;
+}
 @keyframes floating-1 {
     0% {
         transform: translateY(0) rotate(5deg);
