@@ -43,5 +43,10 @@
         "title": "Added parallax effect",
         "date": "2026-02-20",
         "content": "Added a mouse hover parallax effect on the home page and work page, might be trying this out more accross the site so hopefully you like it lol."
+    },
+    {
+        "title": "Added a window to my home page",
+        "date": "2026-02-28",
+        "content": "I made a window that looks at an image of what the weather's like in my city. I think it's a cool element, not done with all the display images yet but there are a few in there now."
     }
 ]
