@@ -38,11 +38,13 @@ img{
     height: 40vh;
     grid-area: shelf;
     animation: floating-3 4s ease-in-out infinite;
+    z-index: -1;
 }
 #selfPortrait{
     display: block;
     animation: floating-4 3s ease-in-out infinite;
     grid-area: portrait;
+    position: relative;
 }
 
 #phone{
@@ -81,6 +83,36 @@ img{
     position: relative;
     width: 100%;
     height: 100;
+}
+#statuscafe {
+    padding: .5em;
+    background-color: azure;
+    border: 1px solid midnightblue;
+    position: absolute;
+    top: -50px;
+    width: 250px;
+    right: -200px;
+    z-index: 9;
+    border-radius: 1rem 1rem 1rem 0;
+
+}
+#statuscafe-username {
+    margin-bottom: .5em;
+    font-style: italic;
+    font-size: 0.8rem;
+}
+#statuscafe-username a{
+    font-style: normal;
+    font-size: 1rem;
+}
+#statuscafe-content {
+    margin: 0 1em 0.5em 1em;
+}
+#statuscafe-content::before{
+    content:'"';
+}
+#statuscafe-content::after{
+    content:'"';
 }
 @keyframes floating-1 {
     0% {

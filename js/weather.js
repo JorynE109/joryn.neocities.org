@@ -9,6 +9,9 @@ hour = date.toLocaleTimeString([], {
     hourCycle: 'h23',
     hour: '2-digit'
 });
+if (hour < 10){
+    hour = getLastDigit(hour);
+}
 console.log("Hour: " + hour);
 
 let sunCondition = 0; //1: night, 2: night/rising, 3: day, 4: day/setting;
@@ -17,6 +20,14 @@ window.addEventListener("load", (event) => {
     weatherFetch();
     weatherDescriptionsFetch();
 });
+
+function getLastDigit(number) {
+    return number
+        .toString()
+        .split("")
+        .map(Number)
+        .pop();
+}
 
 let weatherDescriptions = {};
 async function weatherDescriptionsFetch(){
